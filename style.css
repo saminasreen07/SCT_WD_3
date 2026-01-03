@@ -1,55 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
 body {
-    background: #0f172a;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+
+  /* Background image */
+  background-image: url("WhatsApp\ Image\ 2026-01-03\ at\ 8.04.33\ PM.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Quiz container */
+.quiz-container {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 40px;
+  border-radius: 18px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Question text */
+#question-box {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Options container */
+#options-box {
+  margin: 20px 0;
+}
+
+/* Option labels */
+label {
+  display: block;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+label:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Text input (fill in the blank) */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
   }
-  
-  .quiz-container {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    width: 400px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  #options-box {
-    margin: 20px 0;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-  }
-  
-  button {
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background: #38bdf8;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.85;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
+}
